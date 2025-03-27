@@ -1,11 +1,11 @@
-import React from 'react';
+// src/layout/Layout.tsx
 import { Outlet } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../components/ui/Header';
+import Footer from '../components/ui/Footer';
 
-const Layout: React.FC = () => {
+const Layout = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-warm-white">
+    <div className="flex flex-col min-h-screen bg-warm-white font-sans text-muted-navy">
       <Header />
       <main className="flex-grow">
         <Outlet />
