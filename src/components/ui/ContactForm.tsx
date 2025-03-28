@@ -1,4 +1,3 @@
-// src/components/ui/ContactForm.tsx
 import React, { useState } from 'react';
 
 const ContactForm: React.FC = () => {
@@ -55,7 +54,7 @@ const ContactForm: React.FC = () => {
         />
       </label>
 
-      <button type="submit">Send Message</button>
+      <button type="submit" style={{ backgroundColor: '#C5A98D' }}>Send Message</button>
     </form>
   );
 };

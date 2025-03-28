@@ -4,7 +4,7 @@ import Footer from '../organisms/Footer';
 
 const Layout = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-warm-white text-navy-dark">
+    <div className="flex flex-col min-h-screen bg-C5A98D text-26313E">
       {/* Header Section */}
       <Header />
       

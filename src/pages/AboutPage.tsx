@@ -1,4 +1,3 @@
-// src/pages/AboutPage.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -19,15 +18,15 @@ const AboutPage: React.FC = () => {
 
         <div className="mt-12 grid md:grid-cols-2 gap-8">
           <div>
-            <h2>Our Story</h2>
-            <p>
+            <h2 className="text-26313E">Our Story</h2>
+            <p className="text-26313E/80">
               Zaldivar & Co. was founded with a clear mission: to provide businesses with
               the strategic guidance and technical expertise they need without the
               overhead of a full-time executive team.
             </p>
           </div>
-          <div className="bg-muted-navy/5 p-8 rounded-lg">
-            <h2>Our Approach</h2>
+          <div className="bg-26313E/5 p-8 rounded-lg">
+            <h2 className="text-26313E">Our Approach</h2>
             <ul className="space-y-4">
               <li>✓ We prioritize understanding of your business challenges.</li>
               <li>✓ We develop tailored strategies based on data and experience.</li>

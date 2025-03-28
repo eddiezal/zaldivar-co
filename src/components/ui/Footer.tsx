@@ -4,14 +4,14 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-dark text-warm-white pt-12 pb-8">
+    <footer className="bg-26313E text-C5A98D pt-12 pb-8">
       <div className="container mx-auto px-6">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div>
             <h2 className="text-2xl font-serif font-semibold mb-4">Zaldivar & Co.</h2>
-            <p className="text-warm-light mb-4">
+            <p className="text-C5A98D mb-4">
               Fractional Strategy & Technical Execution, crafted with care.
             </p>
             <p className="text-sm text-warm-paper/70">
@@ -24,27 +24,27 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-serif font-medium mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/" className="hover:text-earthy-taupe transition">
+                <a href="/" className="hover:text-C9A66B transition">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/about" className="hover:text-earthy-taupe transition">
+                <a href="/about" className="hover:text-C9A66B transition">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/services" className="hover:text-earthy-taupe transition">
+                <a href="/services" className="hover:text-C9A66B transition">
                   Services
                 </a>
               </li>
               <li>
-                <a href="/case-studies" className="hover:text-earthy-taupe transition">
+                <a href="/case-studies" className="hover:text-C9A66B transition">
                   Case Studies
                 </a>
               </li>
               <li>
-                <a href="/contact" className="hover:text-earthy-taupe transition">
+                <a href="/contact" className="hover:text-C9A66B transition">
                   Contact
                 </a>
               </li>
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
             <p className="text-warm-paper/80 mb-2">Email: 
               <a
                 href="mailto:hello@zaldivar.co"
-                className="text-earthy-taupe hover:underline"
+                className="text-C9A66B hover:underline"
               >
                 hello@zaldivar.co
               </a>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                 href="https://linkedin.com/company/zaldivar-co"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-earthy-taupe transition"
+                className="hover:text-C9A66B transition"
                 aria-label="LinkedIn"
               >
                 <span className="text-2xl">🔗</span>
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                 href="https://twitter.com/zaldivar_co"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-earthy-taupe transition"
+                className="hover:text-C9A66B transition"
                 aria-label="Twitter"
               >
                 <span className="text-2xl">🐦</span>
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                 href="https://instagram.com/zaldivar_co"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-earthy-taupe transition"
+                className="hover:text-C9A66B transition"
                 aria-label="Instagram"
               >
                 <span className="text-2xl">📸</span>
@@ -106,13 +106,13 @@ const Footer: React.FC = () => {
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a
               href="/privacy-policy"
-              className="text-sm text-warm-paper/70 hover:text-earthy-taupe transition"
+              className="text-sm text-warm-paper/70 hover:text-C9A66B transition"
             >
               Privacy Policy
             </a>
             <a
               href="/terms-of-service"
-              className="text-sm text-warm-paper/70 hover:text-earthy-taupe transition"
+              className="text-sm text-warm-paper/70 hover:text-C9A66B transition"
             >
               Terms of Service
             </a>
