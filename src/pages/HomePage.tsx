@@ -1,5 +1,5 @@
 // src/pages/HomePage.tsx
-import Hero from '../components/ui/Hero';
+import Hero from '../components/organisms/Hero';
 import Services from '../components/ui/Services';
 import CaseStudies from '../components/ui/CaseStudies';
 import About from '../components/ui/About';

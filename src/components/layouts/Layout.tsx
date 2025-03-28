@@ -1,7 +1,7 @@
 // src/layout/Layout.tsx
 import { Outlet } from 'react-router-dom';
-import Header from '../components/ui/Header';
-import Footer from '../components/ui/Footer';
+import Header from '../ui/Header';
+import Footer from '../ui/Footer';
 
 const Layout = () => {
   return (

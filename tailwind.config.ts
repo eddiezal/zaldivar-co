@@ -1,68 +1,56 @@
-// src/components/SEO.tsx
-import { useEffect } from 'react';
+import type { Config } from 'tailwindcss'
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  canonical?: string;
-  image?: string;
-}
-
-const SEO = ({ 
-  title = 'Zaldivar & Co. | Strategy & Technical Execution',
-  description = 'Leading fractional strategy and technical execution—crafted with care.',
-  canonical = 'https://zaldivar.co',
-  image = '/images/og-image.jpg'
-}: SEOProps) => {
-  const siteTitle = title.includes('Zaldivar & Co.') ? title : `${title} | Zaldivar & Co.`;
-  
-  useEffect(() => {
-    // Update title
-    document.title = siteTitle;
-    
-    // Update meta tags
-    updateMetaTag('description', description);
-    updateMetaTag('og:title', siteTitle);
-    updateMetaTag('og:description', description);
-    updateMetaTag('og:url', canonical);
-    updateMetaTag('og:image', image);
-    updateMetaTag('twitter:card', 'summary_large_image');
-    updateMetaTag('twitter:title', siteTitle);
-    updateMetaTag('twitter:description', description);
-    updateMetaTag('twitter:image', image);
-    
-    // Update canonical link
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.setAttribute('href', canonical);
-    
-    return () => {
-      // Clean up function not strictly necessary for meta tags
-    };
-  }, [siteTitle, description, canonical, image]);
-  
-  return null;
-};
-
-// Helper function to update or create meta tags
-function updateMetaTag(name: string, content: string) {
-  let meta = document.querySelector(`meta[name="${name}"], meta[property="${name}"]`);
-  
-  if (!meta) {
-    meta = document.createElement('meta');
-    if (name.startsWith('og:') || name.startsWith('twitter:')) {
-      meta.setAttribute('property', name);
-    } else {
-      meta.setAttribute('name', name);
-    }
-    document.head.appendChild(meta);
-  }
-  
-  meta.setAttribute('content', content);
-}
-
-export default SEO;
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      // Custom Fonts for Modern Craftsman Aesthetic
+      fontFamily: {
+        serif: ['"Playfair Display"', 'EB Garamond', 'serif'],
+        sans: ['Nunito', 'Raleway', 'sans-serif'],
+      },
+      // Line height for improved vertical rhythm
+      lineHeight: {
+        relaxed: '1.75',
+        loose: '2',
+      },
+      // Custom colors aligned with Zaldivar & Co's aesthetic
+      colors: {
+        taupe: {
+          light: '#d8c7ae',
+          DEFAULT: '#BFA98A',
+          dark: '#a78f6e',
+        },
+        navy: {
+          light: '#4a6583',
+          DEFAULT: '#334E68',
+          dark: '#263b50',
+        },
+        warm: {
+          white: '#FFF8F0',
+          light: '#f5efe7',
+          paper: '#f0e9df',
+        },
+      },
+      // Box shadows and text shadows for subtle effects
+      boxShadow: {
+        craftsman: '0 2px 10px rgba(191, 169, 138, 0.15)',
+      },
+      textShadow: {
+        soft: '0 2px 4px rgba(0, 0, 0, 0.08)',
+      },
+      // Responsive Breakpoints (Extra Small to 2XL)
+      screens: {
+        xs: '480px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'), // Ensure typography plugin is enabled
+  ],
+} satisfies Config;

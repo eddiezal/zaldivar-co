@@ -1,3 +1,4 @@
+// src/pages/AboutPage.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -12,12 +13,11 @@ const AboutPage: React.FC = () => {
         >
           <h1 className="section-title text-center">About Zaldivar & Co.</h1>
           <p className="section-subtitle text-center">
-            We're a specialized team of strategists and technologists helping businesses 
+            We're a specialized team of strategists and technologists helping businesses
             thrive in an increasingly complex digital landscape.
           </p>
         </motion.div>
 
-        {/* About content placeholder - to be developed further */}
         <div className="mt-12 grid md:grid-cols-2 gap-8">
           <div>
             <h2 className="text-2xl font-serif font-semibold mb-4">Our Story</h2>
