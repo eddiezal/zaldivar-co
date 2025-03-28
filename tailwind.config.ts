@@ -10,12 +10,12 @@ const config: Config = {
       colors: {
         taupe: {
           light: '#D8C7AE', // Lighter Taupe
-          DEFAULT: '#BFA98A', // Primary Taupe
+          DEFAULT: '#C5A98D', // Primary Taupe
           dark: '#A78F6E', // Darker Taupe
         },
         navy: {
           light: '#4A6583', // Lighter Navy
-          DEFAULT: '#334E68', // Primary Navy
+          DEFAULT: '#26313E', // Primary Navy
           dark: '#263B50', // Darker Navy
         },
         slate: {
@@ -39,6 +39,7 @@ const config: Config = {
           gold: '#CDA45E', // Gold for Highlighted Text
           olive: '#8D8B6C', // Olive as a Neutral Accent
         },
+        gold: '#C9A66B', // Muted Gold for Accents
       },
 
       // 🧱 Updated Font Family with Fallbacks

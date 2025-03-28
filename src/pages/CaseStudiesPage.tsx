@@ -1,4 +1,3 @@
-// src/pages/CaseStudiesPage.tsx
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -83,7 +82,7 @@ const CaseStudiesPage: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-warm-white rounded-lg overflow-hidden shadow-md border border-earthy-taupe/10"
+              className="bg-C5A98D rounded-lg overflow-hidden shadow-md border border-earthy-taupe/10"
             >
               <div className="h-48 bg-muted-navy/10 flex items-center justify-center">
                 <span className="text-3xl">📊</span>
@@ -92,8 +91,8 @@ const CaseStudiesPage: React.FC = () => {
                 <span className="text-xs uppercase tracking-wider text-earthy-taupe font-medium">
                   {study.category}
                 </span>
-                <h3 className="text-xl font-serif font-semibold mt-2 mb-3">{study.title}</h3>
-                <p className="text-muted-navy/80 mb-4">{study.description}</p>
+                <h3 className="text-xl font-serif font-semibold mt-2 mb-3 text-26313E">{study.title}</h3>
+                <p className="text-26313E/80 mb-4">{study.description}</p>
                 <a
                   href={`/case-studies/${study.id}`}
                   className="text-earthy-taupe hover:underline"

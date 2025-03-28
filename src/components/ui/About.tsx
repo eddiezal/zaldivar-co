@@ -1,9 +1,8 @@
-// src/components/ui/About.tsx
 import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-warm-white">
+    <section id="about" className="py-20 bg-C5A98D">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div 
@@ -38,11 +37,11 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-serif font-bold text-muted-navy mb-4">Our Story</h3>
-              <p className="text-muted-navy/80 mb-6">
+              <h3 className="text-2xl font-serif font-bold text-26313E mb-4">Our Story</h3>
+              <p className="text-26313E/80 mb-6">
                 Zaldivar & Co. was founded with a simple mission: provide strategic clarity and technical excellence to businesses ready to transform. We combine decades of leadership experience with cutting-edge technical knowledge.
               </p>
-              <p className="text-muted-navy/80 mb-6">
+              <p className="text-26313E/80 mb-6">
                 Our unique approach bridges the gap between high-level strategy and practical implementation, ensuring your vision becomes reality.
               </p>
               <div className="flex flex-wrap gap-4 mt-8">

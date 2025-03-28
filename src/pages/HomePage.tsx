@@ -1,4 +1,3 @@
-// src/pages/HomePage.tsx
 import Hero from '../components/organisms/Hero';
 import Services from '../components/ui/Services';
 import CaseStudies from '../components/ui/CaseStudies';
@@ -16,7 +15,7 @@ const HomePage = () => {
         </div>
       </section>
       
-      <section className="section bg-muted-navy/5">
+      <section className="section bg-26313E/5">
         <div className="container">
           <Services />
         </div>
@@ -28,7 +27,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="section bg-warm-paper">
+      <section className="section bg-C5A98D">
         <div className="container">
           <About />
         </div>

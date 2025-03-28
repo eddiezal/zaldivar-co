@@ -16,7 +16,7 @@
 
 /* Component Overrides (Optional) */
 .btn-custom {
-  background-color: #BFA98A; /* Taupe */
+  background-color: #C5A98D; /* Pc369 */
   color: #FFF8F0; /* Warm White */
   padding: 12px 24px;
   border-radius: 8px;
@@ -24,7 +24,7 @@
 }
 
 .btn-custom:hover {
-  background-color: #A78F6E; /* Taupe Dark */
+  background-color: #A78F6E; /* P9552 */
 }
 
 /* Fallback Body Styles */
@@ -38,7 +38,7 @@ body {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.75;
-  color: #334E68;
+  color: #26313E; /* P84bd */
   margin-bottom: 1.5rem;
 }
 
@@ -47,7 +47,7 @@ body {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.75;
-  color: #334E68;
+  color: #26313E; /* P84bd */
   margin-bottom: 1.5rem;
 }
 
@@ -57,14 +57,14 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #FFF8F0;
-  background-color: #BFA98A;
+  background-color: #C5A98D; /* P4243 */
   padding: 12px 24px;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .button:hover {
-  background-color: #A78F6E;
+  background-color: #A78F6E; /* Pbcbf */
 }
 
 /* Text Shadows and Subtle Gradients for Headings */

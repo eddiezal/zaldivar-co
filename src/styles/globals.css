@@ -6,7 +6,7 @@
 /* 🌟 Global Styles */
 /* ========================= */
 body {
-  @apply bg-warm-white text-navy-dark font-sans leading-relaxed antialiased;
+  @apply bg-C5A98D text-26313E font-sans leading-relaxed antialiased;
 }
 
 /* ✅ Section Styling */
@@ -23,7 +23,7 @@ body {
 /* 📝 Headings Consistency */
 /* ========================= */
 h1, h2, h3 {
-  @apply font-serif text-earthy-taupe font-bold;
+  @apply font-serif text-C9A66B font-bold;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
