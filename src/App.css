@@ -31,3 +31,72 @@
 body {
   background-color: #FFF8F0;
 }
+
+/* Custom Font Styles for Specific Elements */
+.quote {
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #334E68;
+  margin-bottom: 1.5rem;
+}
+
+.callout {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #334E68;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #FFF8F0;
+  background-color: #BFA98A;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #A78F6E;
+}
+
+/* Text Shadows and Subtle Gradients for Headings */
+h1, h2, h3 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  background: linear-gradient(to right, #BFA98A, #A78F6E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  background: linear-gradient(to right, #BFA98A, #A78F6E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  background: linear-gradient(to right, #BFA98A, #A78F6E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hover Effects for Links and Buttons */
+a:hover {
+  color: #A78F6E;
+  text-decoration: underline;
+}
+
+.button:hover {
+  background-color: #A78F6E;
+  color: #FFF8F0;
+}
