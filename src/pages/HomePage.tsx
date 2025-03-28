@@ -10,11 +10,35 @@ const HomePage = () => {
   return (
     <>
       <SEO />
-      <Hero />
-      <Services />
-      <CaseStudies />
-      <About />
-      <ContactForm />
+      <section className="section">
+        <div className="container">
+          <Hero />
+        </div>
+      </section>
+      
+      <section className="section bg-muted-navy/5">
+        <div className="container">
+          <Services />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <CaseStudies />
+        </div>
+      </section>
+
+      <section className="section bg-warm-paper">
+        <div className="container">
+          <About />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <ContactForm />
+        </div>
+      </section>
     </>
   );
 };

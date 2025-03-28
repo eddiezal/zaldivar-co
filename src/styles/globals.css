@@ -2,39 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global Styling */
+/* ========================= */
+/* 🌟 Global Styles */
+/* ========================= */
 body {
   @apply bg-warm-white text-navy-dark font-sans leading-relaxed antialiased;
 }
 
-/* Headline Typography */
+/* ✅ Section Styling */
+.section {
+  @apply py-16 md:py-12 sm:py-8;
+}
+
+/* ✅ Container for Consistent Layout */
+.container {
+  @apply max-w-7xl mx-auto px-6 md:px-12;
+}
+
+/* ========================= */
+/* 📝 Headings Consistency */
+/* ========================= */
 h1, h2, h3 {
   @apply font-serif text-earthy-taupe font-bold;
 }
 
 h1 {
-  @apply text-4xl md:text-5xl leading-loose;
+  @apply text-4xl md:text-5xl leading-loose mb-8;
 }
 
 h2 {
-  @apply text-3xl md:text-4xl leading-relaxed;
+  @apply text-3xl md:text-4xl leading-relaxed mb-6;
 }
 
 h3 {
-  @apply text-2xl md:text-3xl leading-relaxed;
+  @apply text-2xl md:text-3xl leading-relaxed mb-4;
 }
 
-/* Paragraph and Body Text */
+/* ✅ Paragraph and Body Text */
 p {
-  @apply text-lg text-muted-navy/90 mb-6;
+  @apply text-lg leading-relaxed text-muted-navy/90 mb-6;
 }
 
-/* Links */
+/* ========================= */
+/* 🔗 Links with Consistent Behavior */
+/* ========================= */
 a {
   @apply text-earthy-taupe hover:underline transition-colors;
 }
 
-/* Button Styles */
+/* ========================= */
+/* 🚀 Button Styles */
+/* ========================= */
 .btn-primary {
   @apply bg-earthy-taupe text-warm-white py-3 px-6 rounded-lg shadow-md hover:bg-taupe-dark transition-all;
 }
@@ -43,16 +61,16 @@ a {
   @apply bg-muted-navy/10 text-navy-dark py-3 px-6 rounded-lg hover:bg-muted-navy/20 transition-all;
 }
 
-/* Utilities for Vertical Spacing */
-.section {
-  @apply py-16 md:py-20;
+/* ========================= */
+/* 📏 Spacing Between Sections */
+/* ========================= */
+.space-between {
+  @apply space-y-16 md:space-y-12 sm:space-y-8;
 }
 
-.container {
-  @apply mx-auto px-6 md:px-12 max-w-7xl;
-}
-
-/* Divider */
+/* ========================= */
+/* 🔥 Divider Styling */
+/* ========================= */
 hr {
   @apply border-earthy-taupe/20 my-8;
 }

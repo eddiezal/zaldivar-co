@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     // Corrected MDX configuration
     mdx({
-      // Add any specific options if needed
+      providerImportSource: '@mdx-js/react',
     }),
     react(),
   ],
@@ -17,9 +17,15 @@ export default defineConfig({
       '@': resolve(__dirname, './src'), // Correctly resolve src directory
     },
   },
+  css: {
+    postcss: resolve(__dirname, 'postcss.config.cjs'), // Correctly load postcss config
+  },
   test: {
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/test/setup.ts',
+  },
+  optimizeDeps: {
+    include: ['@mdx-js/react'], // Optimize MDX dependencies
   },
 });

@@ -1,0 +1,33 @@
+/* src/App.css */
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Component Overrides (Optional) */
+.btn-custom {
+  background-color: #BFA98A; /* Taupe */
+  color: #FFF8F0; /* Warm White */
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #A78F6E; /* Taupe Dark */
+}
+
+/* Fallback Body Styles */
+body {
+  background-color: #FFF8F0;
+}
