@@ -24,10 +24,19 @@ body {
 /* ========================= */
 h1, h2, h3 {
   @apply font-serif text-earthy-taupe font-bold;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 h1 {
   @apply text-4xl md:text-5xl leading-loose mb-8;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
 }
 
 h2 {
@@ -39,8 +48,11 @@ h3 {
 }
 
 /* ✅ Paragraph and Body Text */
-p {
+p, li {
   @apply text-lg leading-relaxed text-muted-navy/90 mb-6;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
 }
 
 /* ========================= */
@@ -55,10 +67,12 @@ a {
 /* ========================= */
 .btn-primary {
   @apply bg-earthy-taupe text-warm-white py-3 px-6 rounded-lg shadow-md hover:bg-taupe-dark transition-all;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .btn-secondary {
   @apply bg-muted-navy/10 text-navy-dark py-3 px-6 rounded-lg hover:bg-muted-navy/20 transition-all;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* ========================= */
