@@ -114,6 +114,34 @@ const config: Config = {
         22: '5.5rem',
         26: '6.5rem',
       },
+
+      // 🆕 Responsive Typography Settings
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            h1: {
+              fontFamily: theme('fontFamily.serif').join(', '),
+              fontWeight: '900',
+            },
+            h2: {
+              fontFamily: theme('fontFamily.serif').join(', '),
+              fontWeight: '800',
+            },
+            h3: {
+              fontFamily: theme('fontFamily.serif').join(', '),
+              fontWeight: '700',
+            },
+            p: {
+              fontFamily: theme('fontFamily.sans').join(', '),
+              lineHeight: theme('lineHeight.relaxed'),
+            },
+            blockquote: {
+              fontFamily: theme('fontFamily.serif').join(', '),
+              fontWeight: '600',
+            },
+          },
+        },
+      }),
     },
   },
 

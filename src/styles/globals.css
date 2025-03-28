@@ -74,3 +74,77 @@ a {
 hr {
   @apply border-earthy-taupe/20 my-8;
 }
+
+/* ========================= */
+/* 🆕 Updated Headings with Playfair Display */
+/* ========================= */
+h1, h2, h3 {
+  @apply font-serif text-earthy-taupe font-bold;
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl leading-loose mb-8;
+  font-weight: 900;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl leading-relaxed mb-6;
+  font-weight: 800;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl leading-relaxed mb-4;
+  font-weight: 700;
+}
+
+/* ========================= */
+/* 🆕 Pull Quotes, Testimonials, and Key Client Success Metrics */
+/* ========================= */
+.pull-quote, .testimonial, .key-metric {
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #334E68;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================= */
+/* 🆕 Increased Line Height for Body Text */
+/* ========================= */
+body {
+  line-height: 1.75;
+}
+
+/* ========================= */
+/* 🆕 Adjusted Letter Spacing for Headings and Body Text */
+/* ========================= */
+h1, h2, h3 {
+  letter-spacing: -0.5px;
+}
+
+p {
+  letter-spacing: 0.25px;
+}
+
+/* ========================= */
+/* 🆕 Responsive Typography */
+/* ========================= */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
