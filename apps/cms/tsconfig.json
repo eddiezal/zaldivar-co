@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true
+  },
+  "include": [
+    "sanity.config.ts",
+    "src/schemas/**/*.ts",
+    "src/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
