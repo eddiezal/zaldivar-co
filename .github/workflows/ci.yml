@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Run Tests
+        run: pnpm test -F ui --coverage
+
+      - name: Build UI
+        run: pnpm build -F ui
+
+      - name: Build Storybook
+        run: pnpm --filter ui run build-storybook
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: \${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+EOF
+
+# Add test/lint/format scripts to UI package.json
+jq '.scripts += {
+  "lint": "eslint src --ext .ts,.tsx",
+  "test": "vitest run",
+  "format": "prettier --write \\"src/**/*.{ts,tsx,md}\\""
+}' packages/ui/package.json > tmp.json && mv tmp.json packages/ui/package.json
+
+# Create Vite config to fix Headless UI "use client" warnings
+cat << 'EOF' > packages/ui/vite.config.ts
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  optimizeDeps: {
+    exclude: ['@headlessui/react']
+  }
+});
