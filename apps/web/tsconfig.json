@@ -2,9 +2,9 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": ".",  // Changed from "./src" to "."
+    "rootDir": ".",
     "moduleResolution": "node16",
-    "module": "CommonJS",
+    "module": "ESNext",
     "skipLibCheck": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,

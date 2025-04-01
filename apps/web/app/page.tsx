@@ -12,9 +12,19 @@ const ThemeImage = ({ srcLight, srcDark, ...rest }: Props) => {
   return (
     <>
       {/* Light Theme */}
-      <Image {...rest} src={srcLight} className={`${styles.imgLight}`} alt="Light theme" />
+      <Image
+        {...rest}
+        src={srcLight}
+        className={`${styles.imgLight}`}
+        alt="Light theme"
+      />
       {/* Dark Theme */}
-      <Image {...rest} src={srcDark} className={`${styles.imgDark}`} alt="Dark theme" />
+      <Image
+        {...rest}
+        src={srcDark}
+        className={`${styles.imgDark}`}
+        alt="Dark theme"
+      />
     </>
   );
 };
@@ -86,11 +96,7 @@ export default function Home() {
           />
           Examples
         </a>
-        <a
-          href="https://turbo.build"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://turbo.build" target="_blank" rel="noopener noreferrer">
           <Image
             aria-hidden
             src="/globe.svg"
