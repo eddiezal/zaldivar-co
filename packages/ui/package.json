@@ -14,6 +14,12 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^8.6.11",
+    "@storybook/addon-essentials": "^8.6.11",
+    "@storybook/addon-interactions": "^8.6.11",
+    "@storybook/addon-links": "^8.6.11",
+    "@storybook/builder-vite": "^8.6.11",
+    "@storybook/react": "^8.6.11",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "csstype": "^3.1.3",
