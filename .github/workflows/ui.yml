@@ -1,0 +1,28 @@
+name: UI Package CI
+
+on:
+  push:
+    paths:
+      - "packages/ui/**"
+      - ".github/workflows/ui.yml"
+  pull_request:
+    paths:
+      - "packages/ui/**"
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install deps
+        run: pnpm install
+      - name: Build UI package
+        run: pnpm build --filter @repo/ui
+      - name: Run tests
+        run: pnpm --filter @repo/ui test

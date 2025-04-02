@@ -2,6 +2,7 @@
   "name": "@repo/ui",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -12,13 +13,30 @@
     "./typography": "./dist/components/typography/index.js"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "dev": "storybook dev -p 6006",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "check-types": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "clean": "rm -rf dist",
+    "build": "pnpm run clean && tsc --project tsconfig.json",
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --project-token=<your-chromatic-token> --storybook-build-dir=storybook-static",
+    "check": "pnpm run lint && pnpm run check-types && pnpm run build"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "peerDependencies": {
     "react": "^19.0.0 || ^18.0.0",
     "react-dom": "^19.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "class-variance-authority": "^0.7.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3",
@@ -42,13 +60,12 @@
     "chromatic": "^11.27.0",
     "csstype": "^3.1.3",
     "happy-dom": "^17.4.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "playwright": "^1.51.1",
     "storybook": "^8.6.11",
     "typescript": "^5.8.2",
+    "vite": "^6.2.3",
     "vitest": "^3.1.1"
-  },
-  "dependencies": {
-    "@headlessui/react": "^2.2.0",
-    "class-variance-authority": "^0.7.1"
   }
 }

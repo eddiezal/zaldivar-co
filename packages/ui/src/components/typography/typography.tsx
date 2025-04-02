@@ -1,19 +1,19 @@
 // packages/ui/src/components/typography/typography.tsx
-import React from "react";
+import { ElementType, HTMLAttributes, ReactNode } from "react";
 
-export interface TypographyProps
-  extends React.HTMLAttributes<HTMLElement> {
-  as?: keyof JSX.IntrinsicElements;
+export interface TypographyProps extends HTMLAttributes<HTMLElement> {
+  as?: ElementType;
   variant?: "h1" | "h2" | "h3" | "p" | "span";
+  children: ReactNode;
 }
 
-export const Typography: React.FC<TypographyProps> = ({
+export const Typography = ({
   as: Tag = "p",
   variant = "p",
-  className,
+  className = "",
   children,
   ...props
-}) => {
+}: TypographyProps) => {
   const baseClass = {
     h1: "text-4xl font-bold",
     h2: "text-3xl font-semibold",
@@ -23,10 +23,7 @@ export const Typography: React.FC<TypographyProps> = ({
   };
 
   return (
-    <Tag
-      className={`${baseClass[variant]} ${className || ""}`}
-      {...props}
-    >
+    <Tag className={`${baseClass[variant]} ${className}`} {...props}>
       {children}
     </Tag>
   );
