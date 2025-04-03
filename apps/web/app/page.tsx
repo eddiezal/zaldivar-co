@@ -1,9 +1,8 @@
-// apps/web/app/page.tsx
-import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui";
-import styles from "./page.module.css";
+import Image, { type ImageProps } from 'next/image';
+import { Button } from '@repo/ui';
+import styles from './page.module.css';
 
-type Props = Omit<ImageProps, "src"> & {
+type Props = Omit<ImageProps, 'src'> & {
   srcLight: string;
   srcDark: string;
 };
@@ -11,18 +10,16 @@ type Props = Omit<ImageProps, "src"> & {
 const ThemeImage = ({ srcLight, srcDark, ...rest }: Props) => {
   return (
     <>
-      {/* Light Theme */}
       <Image
         {...rest}
         src={srcLight}
-        className={`${styles.imgLight}`}
+        className={styles.imgLight}
         alt="Light theme"
       />
-      {/* Dark Theme */}
       <Image
         {...rest}
         src={srcDark}
-        className={`${styles.imgDark}`}
+        className={styles.imgDark}
         alt="Dark theme"
       />
     </>
@@ -48,7 +45,6 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
-
         <div className={styles.ctas}>
           <a
             className={styles.primary}
@@ -74,39 +70,10 @@ export default function Home() {
             Read our docs
           </a>
         </div>
-
-        {/* Button imported from @repo/ui */}
         <Button appName="web" className={styles.secondary}>
           Open alert
         </Button>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com/templates?search=turborepo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a href="https://turbo.build" target="_blank" rel="noopener noreferrer">
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to turbo.build →
-        </a>
-      </footer>
     </div>
   );
 }
