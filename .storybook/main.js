@@ -2,7 +2,7 @@ import type { StorybookConfig } from "@storybook/react-vite";
 
 const config: StorybookConfig = {
   stories: [
-    "../packages/ui/src/**/*.stories.@(js|jsx|ts|tsx)",
+    '../packages/ui/src/components/**/*.stories.@(js|jsx|ts|tsx)',
     "../apps/web/src/**/*.stories.@(js|jsx|ts|tsx)",
   ],
   addons: [
@@ -12,6 +12,9 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
   ],
   framework: "@storybook/react-vite",
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
+  },
 };
 
 export default config;

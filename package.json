@@ -27,9 +27,6 @@
     "node": ">=18"
   },
   "lint-staged": {
-  "**/*.{ts,tsx}": [
-    "eslint --fix",
-    "prettier --write"
-  ]
-}
+    "packages/ui/src/**/*.{ts,tsx}": ["eslint --fix", "prettier --write"]
+  }
 }

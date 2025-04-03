@@ -10,6 +10,6 @@
     "lib": ["DOM", "ESNext", "DOM.Iterable"],
     "types": ["vitest/globals", "vite/client", "react", "react-dom", "@testing-library/jest-dom"]
   },
-  "include": ["src"],
+  "include": ["src", ".storybook/main.ts"],
   "exclude": ["node_modules", "dist"]
 }
